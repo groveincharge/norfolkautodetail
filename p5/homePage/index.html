@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Delius Swash Caps|Milonga|Tangerine|Berkshire Swash|Kurale"/>
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <meta name="description" content="Upgrade the look and feel of your vehicle  with a professional auto detailing job today."/>
+    <meta name="keyword " content="auto detail,car wash, mobile detail" />
+    <style> body {padding: 0; margin: 0;} </style>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+    <!--<script src="../p5.min.js"></script>-->
+    <script src="p5.dom.js"></script>
+    <!--<script src="../addons/p5.sound.min.js"></script>-->
+    <script src="sketch.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+
+  <body onload="return hideForm()">
+
+    <div class="homepage">
+      <img src="imageFolder/redselfwash.jpeg" id ="redcar" alt="Car Clipart" width="7.5%" height="7.5%"/>
+      <button onclick="return hideForm()">Page Reset</button>
+       <img src="imageFolder/selfwash.jpg" id="bluecar" alt="Car clipart" width="7.5%" height="7.5%"/>
+    </div>
+    <div class="clr"></div>
+    <div class="grid_items">
+        <div class="first">
+          <h1>Accepting Subscribers</h1>
+        </div>
+       <div class="second">
+           <h1>norfolkautodetail.com</h1>
+           <h2>(757) 581-9156</h2>
+       </div>
+       <div class="third">
+              <h1>Featured Product</h1>
+          </div>
+
+       <div class="fourth">
+            <input type="submit" id="subscribe" value="Subscriber"/>
+            <input type="submit" id="vacuumId" value="Submit Info"/>
+     <div id="buyButton">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="F57BMXJQQAVSN">
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+       </div><!--end buyButton-->
+        </div><!--fourth-->
+
+       <div class="fifth">
+          <div id="services">
+           <input type="submit"  id="serviceInput" value="Services"/>
+           <input type="submit" id="priceInput" value="Price Chart"/>
+        </div><!--end services-->
+       </div><!--fifth-->
+
+       <div class="sixth">
+            <input type="submit" id="checkOut" value="Customer"/>
+            <input type="submit" id="productId" value="Submit Info"/>
+          <div id="probuyButton">
+           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+             <input type="hidden" name="cmd" value="_s-xclick">
+             <input type="hidden" name="hosted_button_id" value="UVU5XCZ7W9D7U">
+             <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+           <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+      </div><!--probuyButton-->
+        </div><!--sixth-->
+
+       <div class="seventh">
+         <h1>Subscription Offer</h1>
+
+    <div id="minivacContainer"> 
+       <div id="vacIntro">
+        <p> This Mini-Vac retails for <b>$ 79.99</b>. 
+            New Subscribers to <b>Grover's Auto Detail</b> will receive it for
+            Just <b>$ 39.99</b>. Price includes <b>shipping & handling</b>.The longer the mess sits, the
+            harder it is to clean later. This Mini-Vac gets the job done. Powerful and compact, it's a convevient tool for your vehicle. Accept this offer by clicking on the above <b>subscriber</b> button.
+       </p>
+     </div><!--end vacIntro-->
+      
+ 
+       <div id="vacImage">
+         <img src="imageFolder/miniVac.jpg" alt="12v mini vac" width="90%" height="90%"/>
+       </div>
+
+      <div id="vacDescription">
+        <p>
+       Feature below: 
+       Package:1*vacuum 
+       cleaner Material:ABS 
+       Size:34cm*9.5cm*10cm
+       (13.39"*3.74"*3.94")/L*W*H 
+       Power line length: about 450cm(177.17") 
+       DC-12V Rated power: 100W  
+       Package:1*cleaning brush 
+       Material:microfiber,nylon and PP 
+       Size:16.5cm*4cm/6.50"*1.57" Weight:50g 
+       Designed to clean blinds
+       ,keyboard, air-condition,etc.
+       Washable and convenient.
+       Insert mini-blind cleaner,
+       one roller between each slat.
+       100% brand new and high quality
+        Unique design,very popular.
+      </p>
+       </div><!--end vacDescription-->
+
+        <select id="voggle" onclick="return togglevacPicture()">
+        <option value="mini-Vac">Mini-Vac</option>
+        <option value="description">Description</option>
+      </select> 
+
+      <div id="subForm">
+      <h1>Home/Office</h1><br/>
+     <form> 
+     First: <input type="text" id="firstName" name="First" /><br/><br/>
+     Last: <input type="text" id="lastName" name="Last" /><br/><br/>
+     Email: <input type="email" id="email" name="Email" /><br /><br/>
+     Address: <input type="text" id="address" name="Address" /><br/><br/>
+     City: <input type="text" id="city" name="City" /><br/><br/>
+     State: <input type="text" id="state" name="State" /><br/><br/>
+     Zip: <input type="text" id="zipCode" name="Zip" /><br/><br/>
+     Phone: <input type="text" id="phoneNumber" name="Phone" /><br/>
+      <input type="submit" id="subscribe" value="Subscriber"/>
+    </form>
+     </div><!--end subForm-->
+
+      <div id="showSubscriber">
+        <li id="displayStatus"></li>
+        <li id="displayfirstName"></li>
+        <li id="displaylastName"></li>
+        <li id="displayemail"></li>
+        <li id="displayaddress"></li>
+        <li id="displaycity"></li>
+        <li id="displaystate"></li>
+        <li id="displayzipCode"></li>
+        <li id="displayphoneNumber"></li>
+      </div><!--end showSubscriber-->
+
+        <div id="thanks">
+         <h1>Welcome New Subscriber!!</h1>
+        <span>Claim your Subscriber appreciation gift by clicking the <b>Buy Button</b>. All transactions are processed
+         through <b>Paypal</b>, and item will be shipped to subscriber address. All new subscribers 
+         will receive a <b>comfirmatiom email</b> within 24hrs.</span>
+        </div><!--end thanks-->
+       </div><!--end minivacContainer-->
+     </div><!--seventh-->
+
+       <div class="eighth">
+          
+         <div id="intro">
+         <span><strong>Norfolkautodetail.com</strong> is the place to contact for your professional auto detailing needs. Drop that vehicle off by 9:00 am for an early afternoon pick-up. We work to accommadate your schedule. Call at least one day ahead to ensure appointment availability. We service the people of Virginia Beach,
+       Chesapeake, Norfolk, Portsmouth, Hampton and Newport News. <strong>Professional auto detailing </strong>is mainly
+       a self learnt skill. We have the knowledge and experience to get the job done right. Upgrade the
+       look and feel of your vehicle with an awesome detail job, <strong>Today!!</strong>
+        </span><br>
+        <img src="imageFolder/feellinggood.png" alt="Mid-Size Car" width="90%" height="90%"/>
+    </div><!--end intro-->
+
+    <div id="serviceContainer">
+         <div id="serviceChart">
+         <section>
+          <h1>Interior Detail</h1>
+              <p>
+                1. Vacuum carpet and mats.</br>
+                2. Spot clean carpet, mats and seats.</br>
+                3. Dust and clean dashboard and side panels.</br>
+                4. Clean center console and cup holders.</br>
+                5. Treat and protect dashboard and side panels.</br>
+                6. Clean windows.</br>
+              </p> 
+
+            <h1>Exterior Detail</h1>
+              <p>
+                1. Handwash and chamois dry vehicle.</br>
+                2. Clean tires and rims.</br>
+                3. Remove minor scratches, tree sap and tar.</br>
+                4.Hand polish and buff exterior.</br>
+                5.Dress tires.</br>
+                6.Clean windows.</br>
+              </p>
+            
+                 <h1>Engine Clean</h1>
+              <p>
+                1. Brush loose dirt and cover electrical connections.</br>
+                2. Degrease engine block and surrounding components.</br>
+                3. pressure wash engine block.</br>
+                4. Blow dry or drip dry block.</br>
+                5. Add protection and gloss.</br>
+              </p>     
+             </section>
+        </div><!--end serviceChart--> 
+
+  <div id="priceChart">
+  <h1>Price Chart</h1>
+    <table>
+    <thead>
+      <tr>
+        <th>Vehicle</th>
+        <th>Interior</th>
+        <th>Exterior</th>
+    <th>Full Detail</th>
+    <th>Engine Clean</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Mid-Size Car</th>
+        <td>$65</td>
+        <td>$65</td>
+        <td>$125</td>
+        <td>$65</td>
+      </tr>
+      <tr>
+        <th>Mid-size SUV</th>
+        <td>$75</td>
+        <td>$75</td>
+        <td>$140</td>
+        <td>$75</td>
+      </tr>
+      <tr>
+        <th>Mid-size Pick-up</th>
+        <td>$65</td>
+        <td>$75</td>
+        <td>$135</td>
+        <td>$75</td>
+      </tr>
+      <tr>
+        <th>Full-Size SUV</th>
+        <td>$100</td>
+        <td>$75</td>
+        <td>$160</td>
+        <td>$75</td>
+      </tr>
+      <tr>
+        <th>Full-Size Pick-Up</th>
+        <td>$75</td>
+        <td>$90</td>
+        <td>$150</td>
+        <td>$75</td>
+      </tr>
+      <tr>
+        <th>Mini-van</th>
+        <td>$90</td>
+        <td>$90</td>
+        <td>$170</td>
+       <td>$75</td>
+      </tr>
+      </tbody>
+    </table>
+  </div><!--end priceChart-->
+
+    </div><!--end serviceContainer--> 
+     </div><!--eight-->
+
+       <div class="nineth">
+           <h1>Jumpstarter</h1>
+
+           <div id="productContainer" >
+    <!--  <h1>Compact Jump Starter<h1>-->
+           <div id="jumperIntro">
+            <p>This Compact Jump Starter is a must for your Vehicle. This is not your
+            conventional Jump Starter. It is lightweight, powerful, and easy to operate. It has
+            a flashlight and conveniently placed USB ports for charging Phones, 
+           computers and other USB port products. Click on the above <b>Customer</b> button and proceed to
+           check out.
+           </p>
+           </div><!--end jumperIntro-->
+
+             <div id="jumpStarter">
+               <p>just <b>$99</b>-Price includes <b>Shipping & Handling.</b></p>
+               <img src="imageFolder\jumpstarter.JPG" alt="12v Jump Starter" width="90%" height="90%"/>
+             </div><!--end jumperStarter-->
+     
+     <div id="description">
+         <p>
+      Description:
+      1. Output: 12V / 2A , 
+      2. Input: 12V / 1A 
+      3. Cycle Life: 3000 Times 
+      4. Starting Current: 200A 
+      5. Peak Current: 600A(3S) 
+      6. Operating Temperature: -20?~60? 
+      7. LED Quantity: 3 
+      8. Battery Capacity: 50800Mah 
+      9.Size: about 17*8*4 cm / 6.69*3.15*1.57 in 
+     10.Scope: Mobile phones, PSP, tablet, MP4, PMP, GPS and so on. 
+      Packing list: 
+     1* automotive mobile power supply 
+     1* charger 
+     1* car charger 
+     1* auto positive and negative ignition clip 
+     1* four in one USB data line 
+     1* instruction 
+   </p>
+      </div><!--end description-->
+
+
+    <div id="productForm">
+      <h1>Home/Office</h1><br/>
+      <form>
+     First: <input type="text" id="firstname"/><br/><br/>
+     Last: <input type="text" id="lastname"/><br/><br/>
+     Email: <input type="email" id="Email"/><br /><br/>
+     Address: <input type="text" id="Address"/><br/><br/>
+     City: <input type="text" id="City"/><br/><br/>
+     State: <input type="text" id="State"/><br/><br/>
+     Zip: <input type="text" id="zipcode"/><br/><br/>
+     Phone: <input type="text" id="phonenumber"/>
+   </form>
+  </div><!--end productForm-->
+
+        <div id="showBuyer">
+           <li id="displaystatus"></li>
+           <li id="displayfirstname"></li>
+           <li id="displaylastname"></li>
+           <li id="displayEmail"></li>
+           <li id="displayAddress"></li>
+           <li id="displayCity"></li>
+           <li id="displayState"></li>
+           <li id="displayzipcode"></li>
+           <li id="displayphonenumber"></li>
+      </div><!--end showBuyer-->   
+
+     <div id="disclaimer">
+         <h1>Thank You Customer!!</h1>
+            <p>All sales, returns and exchange policies are
+             set by the manufacturer. We assist customers with
+             having a comfortable buying experience.
+             You will receive confirmation of you purchase by
+              email within 24hours.
+            </p>
+          </div><!--end disclaimer-->
+
+    <select id="joggle" onclick="return togglejumperPicture()">
+        <option value="jumpStarter">Jump Starter</option>
+        <option value="description">Description</option>
+      </select>
+
+  </div> <!--end productContainer-->
+  </div><!--nineth-->
+       <div class="tenth">
+           <footer>
+        <p> copyright&2019 norfolkautodetail.com</p>
+       </footer>
+     </div>
+  </div><!--end gird_items-->
+  
+  </body>
+  </html>
+
+
